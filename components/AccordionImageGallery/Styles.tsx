@@ -5,10 +5,6 @@ export const AccordionContainer = styled.div`
   height: 100%;
 `;
 
-export const AccordionWrapper = styled.div`
-
-`;
-
 export const AccordionSlide = styled.div`
   display: flex;
   justify-content: center;

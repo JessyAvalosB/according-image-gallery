@@ -5,7 +5,6 @@ import {
   AccordionGalleryWrap,
   AccordionItem,
   AccordionSlide,
-  AccordionWrapper,
 } from '../AccordionImageGallery/Styles';
 
 export interface AccordionImageGalleryProps {
@@ -17,17 +16,15 @@ export const AccordionImageGallery = ({
 }: AccordionImageGalleryProps) => {
   return (
     <AccordionContainer>
-      <AccordionWrapper>
-        <AccordionSlide>
-          <AccordionGalleryContainer>
-            <AccordionGalleryWrap>
-              {images.map((image, i) => (
-                <AccordionItem key={i} bgImage={image} />
-              ))}
-            </AccordionGalleryWrap>
-          </AccordionGalleryContainer>
-        </AccordionSlide>
-      </AccordionWrapper>
+      <AccordionSlide>
+        <AccordionGalleryContainer>
+          <AccordionGalleryWrap>
+            {images.map((image, i) => (
+              <AccordionItem key={i} bgImage={image} />
+            ))}
+          </AccordionGalleryWrap>
+        </AccordionGalleryContainer>
+      </AccordionSlide>
     </AccordionContainer>
   );
 };
