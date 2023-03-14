@@ -8,16 +8,22 @@ import {
   AccordionWrapper,
 } from '../AccordionImageGallery/Styles';
 
-export const AccordionImageGallery = ({}) => {
+export interface AccordionImageGalleryProps {
+  images: string[];
+}
+
+export const AccordionImageGallery = ({
+  images,
+}: AccordionImageGalleryProps) => {
   return (
     <AccordionContainer>
       <AccordionWrapper>
         <AccordionSlide>
           <AccordionGalleryContainer>
             <AccordionGalleryWrap>
-              <AccordionItem />
-              <AccordionItem />
-              <AccordionItem />
+              {images.map((image, i) => (
+                <AccordionItem key={i} bgImage={image} />
+              ))}
             </AccordionGalleryWrap>
           </AccordionGalleryContainer>
         </AccordionSlide>
