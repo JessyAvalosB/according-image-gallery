@@ -19,14 +19,11 @@ export const AccordionGalleryContainer = styled.div`
 
 export const AccordionGalleryWrap = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
   height: 85vh;
 `;
 
 export const AccordionItem = styled.div<{ bgImage: string }>`
   flex: 1;
-  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: none;
